@@ -337,7 +337,7 @@ func xmlToMapParser(skey string, a []xml.Attr, p *xml.Decoder, r bool) (map[stri
 	if skey != "" {
 		n = make(map[string]interface{})  // old n
 		na = make(map[string]interface{}) // old n.nodes
-		if len(a) > 0 {
+		if len(a) > 0 && false {
 			for _, v := range a {
 				if snakeCaseKeys {
 					v.Name.Local = strings.Replace(v.Name.Local, "-", "_", -1)
